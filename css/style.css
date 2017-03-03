@@ -1,0 +1,314 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/*font: inherit;*/
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+    background-image: url(back.jpg);
+    background-attachment: fixed;
+    font-family: 'PT Serif Caption', serif;
+
+
+}
+header {
+    height: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.page {
+    height: 70%;     
+    opacity: 0.9;
+}
+
+
+
+#banner img {
+    width: 100%;
+   
+}
+#banner {
+    height: auto;
+    background-color: black;
+}
+
+
+
+
+/* Menu  */
+#menu-checkbox {
+  /* чекбокс скрыт */
+    display: none;
+    
+}
+.main-menu {
+  /* пункты меню скрыты */
+    display: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgb(159, 23, 23);
+    height: 150px; 
+    
+}
+.main-menu li {
+  /* пункты меню расположены вертикально */
+  /* каждый имеет ширину 100% */
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    height: 20%;
+    
+    border-color: #5d0000;
+   
+
+}
+.main-menu a {
+  /* немного стилизуем ссылки */
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #ffffff;
+    
+    text-decoration: none;
+}
+
+.main-menu li:hover {
+    background-color: black;
+    transform: skew(-15deg);
+
+
+
+}
+
+.toggle-button {
+    text-align: center;
+    display: block;
+    margin-top: 0;
+  /* не забываем явно указать каким должен быть курсор */
+    cursor: pointer;
+    background-color: rgb(159, 23, 23);
+    color: white;
+}
+.toggle-button:after {
+  /* получаем данные из атрибута data-open в html */
+    content: attr(data-open);
+    display: block;
+    padding: 10px 30px;
+}
+#menu-checkbox:checked + nav[role="navigation"] .main-menu {
+  /* когда чекбокс активен меню становится видимым */
+   display: block;
+}
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+    content: attr(data-close);
+}
+
+@media screen and (min-width: 780px) {
+    .toggle-button {
+      /* label скрыт */
+        display: none;
+    }
+    .main-menu {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(159, 23, 23);
+        height: 50px;
+    }
+    .main-menu li {
+      /* теги <li> расположены в ряд */
+       width: calc(100% / 5);
+        height: inherit;
+       text-align: center;
+       display: inline-block;
+       margin-right: -4px;
+       transition: 0.8s all;
+       
+    }
+    .main-menu a {
+       display: inline-block;
+       margin-right: -4px;
+       text-decoration: none;
+       color: #ffffff;
+        padding: 13px 0 13px 0;
+        font-size: 150%; 
+    }
+
+}
+
+
+
+
+
+.mainfield {
+    background-color: rgba(81,81,81,1);
+    height:  90%;
+    width: 80%;
+    margin: 0 10% 2% 10%;
+    clear: both;
+    color: white;
+}
+
+.underground {
+    height: 10%;
+    width: 100%;
+    background-color: rgb(159, 23, 23);
+    margin-bottom: 0px;
+    position: relative;
+    clear: both;
+}
+
+.underground address {
+    font-size: 100%;
+	color: white;
+	text-align: center;
+	padding-bottom: 1%;
+}
+.underground p {
+	color: white;
+	text-align: center;
+	font-style: italic;
+	padding-bottom: 1%;
+}
+#underarticle {
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	color: white;
+}
+
+#galery {
+    margin: 1%;
+    width: 98%;
+    height: 700px;
+    background-color: #c3c3c3;
+}
+
+
+.line {
+    height: 2px;
+    background-color: grey;
+	border-radius: 30px;
+}
+.article {
+    text-align: center;
+    height: 50%;
+    padding: 3%;
+	font-size: 115%;
+}
+p {
+    text-indent: 3%;   
+}
+
+.content {
+	display:inline-block;
+    width: 100%;
+    vertical-align: top; 	
+}
+
+#authpic {
+	float: right;
+	width: 25%;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 5%;
+	margin-top: -1%;
+}
+
+#general {
+	padding: 2%;
+	height: 88%;
+}
+
+#general p {
+	padding-top: 8%;
+	padding-left: 2%;
+	line-height: 145%;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#inache {
+	margin-top: 3%;
+	width: 100%;
+	
+}
+
+#lineche {
+	height: 2px;
+    background-color: grey;
+	border-radius: 30px;
+	margin-top: 15%;
+}
+#tblogin {
+	border=3px;
+	border-color: white;
+}
+
+#divlogin {
+	padding: 25%;
+	padding-top: 10%;
+}
+#divlogin form{
+	margin: 30%;
+	text-align: center;
+}
+#login input{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	
+}
+#password input{
+	margin-top: 2%;
+	margin-bottom: 5%;
+}
+#reg {
+	margin-top: 2%;
+}
+#social #VK {
+	height: 30px;
+	padding-left: 45%;
+}
+
+#FB {
+	height: 30px;
+	margin-bottom: -1px;
+}
+
+.pics img{
+	width: 80%;
+	padding-left: 10%;
+}
+.pics p{
+	padding: 2% 10% 2% 10%;
+}
